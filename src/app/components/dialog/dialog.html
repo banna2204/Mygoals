@@ -1,0 +1,22 @@
+<header class="header flex justify-between items-center ">
+    <h1 mat-dialog-title class="m-0">Hello, {{data.name}}</h1>
+    <button mat-button (click)="closeDialog()">Close</button>
+</header>
+
+<mat-dialog-content class="pt-0">
+    <div class="body">
+        <p class="m-0">This is the content of the dialog.</p>
+    </div>
+    <div class="flex item-center gap-4 mt-8">
+      <label>Float label: </label>
+      <mat-radio-group [formControl]="floatLabelControl">
+        <mat-radio-button value="auto">Auto</mat-radio-button>
+        <mat-radio-button value="always">Always</mat-radio-button>
+      </mat-radio-group>
+    </div>
+</mat-dialog-content>
+
+<footer class="footer pl-11 flex justify-between items-center">
+    <div class="flex item-center">footer content</div>
+    <button matButton [mat-dialog-close]="true">Close</button>
+</footer>
