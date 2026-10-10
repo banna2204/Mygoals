@@ -1,0 +1,83 @@
+::ng-deep .mat-form-field {
+  mat-icon {
+    height: 16px;
+    width: 16px;
+    color: var(--color-second-grey);
+  }
+  .mat-mdc-text-field-wrapper {
+    border-bottom: none;
+
+    &:hover {
+      border: 1px solid blue;
+    }
+
+    &.mdc-text-field--focused {
+      border: 2px solid rgb(0,0,255,0.7);
+    }
+  }
+
+  .mdc-text-field--filled {
+    border-radius: 20px;
+    padding: 0 10px;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .mdc-text-field--filled .mdc-line-ripple::before,
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-width: 0px;
+  }
+
+  .mdc-text-field--outlined .mat-mdc-form-field-infix,
+  .mdc-text-field--no-label .mat-mdc-form-field-infix {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .mat-mdc-select {
+    .mat-mdc-select-min-line {
+      margin-left: 10px;
+    }
+
+    .mat-mdc-select-arrow-wrapper {
+      display: none;
+    }
+  }
+
+  --mat-sys-hover-state-layer-opacity: 0;
+
+  .cdk-overlay-pane {
+    margin-top: 5px;
+
+    .mat-mdc-select-panel {
+      padding: 5px;
+      border-radius: 20px;
+      background-color: transparent;
+
+      .mat-mdc-option {
+        min-height: 30px;
+        border-radius: 20px;
+
+        &:focus.mdc-list-item,
+        &.mat-mdc-option-active.mdc-list-item {
+          background-color: #dae2f9;
+        }
+
+        &:hover:not(.mdc-list-item--selected) {
+          background-color: #f3e5e8;
+        }
+      }
+
+      .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+        width: 9px;
+        height: 4px;
+      }
+    }
+  }
+}

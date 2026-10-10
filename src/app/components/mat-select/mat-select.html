@@ -1,0 +1,13 @@
+<mat-form-field class="mat-form-field m-10 flex">
+  @if(value() == null) {
+    <mat-icon class="mat-icon f-s-16">{{isPanelOpen() ? 'search' : 'apps'}}</mat-icon>
+  } @else {
+    <mat-icon class="mat-icon f-s-16">{{isPanelOpen() ? 'search' : 'corporate_fare'}}</mat-icon>
+  }
+  <mat-select [(ngModel)]="value" canSelectNullableOptions (openedChange)="isPanelOpen.set($event)">
+    @for (option of options; track option) {
+      <mat-option [value]="option.value">{{option.label}}</mat-option>
+    }
+  </mat-select>
+  <mat-icon class="mat-icon f-s-16">{{isPanelOpen() ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
+</mat-form-field>
