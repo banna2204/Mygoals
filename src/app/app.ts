@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Customization } from './components/customization/customization';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('my-goals');
+  title = signal('Hello');
+  dialog = inject(MatDialog);
+
+  openDialog() {
+    const dialogRef = this.dialog.open(Customization , {
+      width: '400px',
+      height: '400px',
+    })
+  }
 }

@@ -1,0 +1,77 @@
+::ng-deep .mat-mdc-dialog-container {
+  &.mdc-dialog--open .mat-mdc-dialog-surface{
+    background-color: blue;
+  }
+
+}
+
+::ng-deep .example-form{
+  .input-wrapper{
+    background-color: #ffffff;
+    width: fit-content;
+    cursor: pointer;
+
+    input{
+      outline: none;
+      border: none;
+    } 
+
+    .material-symbols-outlined{
+      color: blue;
+    }
+
+    mat-icon{
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      color: #2A394F;
+    }
+
+    &:hover {
+      border: 1px solid rgb(255, 0, 0);
+    }
+
+  }
+  .input-wrapper.panel-open {
+    border: 2px solid rgb(255, 0, 0);
+  }
+
+  .cdk-overlay-pane{  
+    width: 217px !important;
+  }
+
+  .mat-mdc-autocomplete-panel {
+    margin-top: 17px;
+    padding: 5px;
+
+    .mat-mdc-option {
+      border-radius: 8px;
+      cursor: pointer;
+      min-height: 30px;
+
+      &:hover:not(.mdc-list-item--selected) {
+        background-color: #f3e5e8;
+      }
+
+      .mdc-list-item--selected:hover {
+        background-color: #dae2f9;
+      }
+    }
+
+    
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-active, .mat-mdc-option-multiple, :focus){
+      background-color: #dae2f9;
+    }
+  }
+
+  .cdk-overlay-pane:not(.mat-mdc-autocomplete-panel-above) div.mat-mdc-autocomplete-panel {
+    border-radius: 8px;
+    left: -26px;
+    width: 217px;
+  }
+
+  .mat-pseudo-checkbox {
+    height: 14px;
+    width: 14px;
+  }
+}
