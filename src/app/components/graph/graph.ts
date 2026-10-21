@@ -11,7 +11,7 @@ Chart.register(...registerables);
 })
 export class Graph {
   @ViewChild('myChart') chartCanvas!: ElementRef<HTMLCanvasElement>;
-  chart: any;
+  public chart?: Chart;
 
   ngAfterViewInit() {
     this.initChart();
@@ -47,12 +47,12 @@ export class Graph {
           // ],
 
           backgroundColor: function(context) {
-          const index = context?.dataIndex;
-          const value = context?.dataset?.data[index];
-            if(typeof value == 'number'){
-              return value > 10 ? 'red' : 'green';
-            }
-            return 'blue'
+            const index = context?.dataIndex;
+            const value = context?.dataset?.data[index];
+              if(typeof value == 'number'){
+                return value > 10 ? 'red' : 'green';
+              }
+              return 'blue'
           },
           borderWidth: 0,
           barThickness: 22,
