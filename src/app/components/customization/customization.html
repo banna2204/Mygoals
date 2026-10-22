@@ -1,0 +1,21 @@
+<form class="example-form mt-10 ml-10">
+    <div class="input-wrapper flex item-center justify-center br-8 p-5" [class.panel-open]="autoTrigger.panelOpen">
+      <mat-icon class="search-icon f-s-16 mr-2 material-symbols-outlined"> {{ autoTrigger.panelOpen ? 'search' : 'apps' }}</mat-icon>
+
+      <input
+        type="text"
+        placeholder="Search for a street"
+        [formControl]="control"
+        [matAutocomplete]="auto"
+        class="example-input"
+        #autoTrigger="matAutocompleteTrigger"
+      />
+      <mat-icon class="arrow-icon f-s-16" > {{ autoTrigger.panelOpen ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+  </div>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    @for (street of filteredStreets | async; track street) {
+      <mat-option [value]="street">{{street}}</mat-option>
+    }
+  </mat-autocomplete>
+</form>

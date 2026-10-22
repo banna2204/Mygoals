@@ -1,0 +1,12 @@
+@if(!isOpen()){
+    <div class="logo" (click)="expandPanel()" >
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAgVBMVEX////Mz+Jiba2OlcLy8vgAJJErP5kRLpObocje4OwMK5M0Rpx9hrppdLHr7PSzuNXEx97T1eYjOZcdNZZLWaQbM5VVYqj++fj86OarsdHwaFLuTS3729cgN5dPXabvWT/vXkX2sKf60cz3tKzvUjXwYUmlqs35zcj98vD5yML0mIxJ6fyYAAAApUlEQVR4AaXNAxYEQQwA0d6xbVv3P+COnWU99+8k6MMeGA4aQVI0AyHL8ZQAjooczcJHJeBZ3lLOqJLakm5cUOc1c4ynLIRs54iayw5JxoCeHxwwnE9FPdpxckE7zWDM48IGMS3jfxCjMRiJioBx6IQEzUk9JnU2VCcDHktLL5nybjBOlooLOtPSobpBtwUIzPbipIGwTbwyh9ApyiJDUFnXos96AtxaGFBUtVNhAAAAAElFTkSuQmCC" alt="logo">
+    </div>
+} @else{
+    <div class="chat-panel" [class.open]="isOpen()" (click)="expandPanel()">
+        <div className="panel-content">
+            <input type="text" placeholder="Ask what ever you want!!!">
+        </div>
+    </div>
+}
+
