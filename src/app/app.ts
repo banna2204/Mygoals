@@ -4,10 +4,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { Customization } from './components/customization/customization';
 import { Graph } from './components/graph/graph';
 import { DeferComponent } from './components/defer-component/defer-component';
+import { Button } from './components/button/button';
+import { AnimatedScrollUp } from './components/animated-scroll-up/animated-scroll-up';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Graph, DeferComponent],
+  imports: [RouterOutlet, Graph, DeferComponent, Button, AnimatedScrollUp],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -22,5 +24,9 @@ export class App {
       width: '400px',
       height: '400px',
     })
+  }
+
+  userClicked(event: Event) {
+    console.log(event)
   }
 }
