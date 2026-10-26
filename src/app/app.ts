@@ -21,8 +21,10 @@ export class App {
 
   openDialog() {
     const dialogRef = this.dialog.open(Customization , {
-      width: '400px',
-      height: '400px',
+      width: '700px',
+      height: '600px',
+      maxHeight: '95vh',
+      maxWidth: '90vw'
     })
   }
 

@@ -1,35 +1,25 @@
 .logo{
-    width: 56px;
-    height: 56px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 
-            0 8px 10px -6px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.chat-panel {
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5),0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   position: fixed;
   right: 20px;
   bottom: 20px;
+}
 
+.chat-panel {
   width: 0;
   height: 50px;
   overflow: hidden;
-
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-
   transition: none;
   z-index: 1000;
-  
-
-  input{
-    position: absolute;
-    bottom: 0;
-  }
 }
 
 .chat-panel.open {
@@ -50,5 +40,44 @@
   100% {
     width: 400px;
     height: 600px;
+  }
+}
+
+.close {
+  animation: closePanel 0.65s ease forwards; 
+}
+
+@keyframes closePanel {
+  0% {
+    width: 400px;
+    height: 600px;
+  }
+
+  55% {
+    width: 400px;
+    height: 50px;
+  }
+
+  100% {
+    width: 0;
+    height: 50px;
+  }
+}
+
+.hide-logo {
+  animation: hideLogo 0.65s ease forwards;
+}
+
+@keyframes hideLogo {
+  0% {
+    display: none;
+  }
+
+  80% {
+    display: none;
+  }
+
+  100% {
+    display: flex;
   }
 }
