@@ -1,0 +1,15 @@
+<p appCommonClass [class.active]="isActive()">test works!</p>
+
+<ng-template #example let-text="text" let-color="color">
+    <div [style.color]="color">{{text}}</div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="example; context:{text:'hello', color:'green'}"></ng-container>
+<ng-container *ngTemplateOutlet="example; context:{text:'ng-template', color:'red'}"></ng-container>
+<ng-container *ngTemplateOutlet="example; context:{text:'ng-container', color:'black'}"></ng-container>
+
+<div>{{staticData()?.id}}</div>
+<div>{{staticData()?.role}}</div>
+<div>{{query()?.title}}</div>
+
+<router-outlet></router-outlet>
