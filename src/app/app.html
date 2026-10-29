@@ -1,0 +1,13 @@
+<div appParaDirective [title]="title()" [user]="user()" class="f-s-20 mt-10 ml-10">
+  {{title()}}
+</div>
+
+<button (click)="onColorChange()">click</button>
+
+<div #content>view child</div>
+
+<div appCommonClass [class.active]="isActive()">Host binding</div>
+
+<button (click)="navigateTo()">navigate</button>
+
+<router-outlet></router-outlet>
