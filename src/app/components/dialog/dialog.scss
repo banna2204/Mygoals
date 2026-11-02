@@ -1,0 +1,27 @@
+header{
+    button{
+        margin-top: 17px;
+    }
+}
+
+.mat-mdc-dialog-content{
+    padding-top: 0px;
+    flex-grow:0;    
+}
+
+::ng-deep .mat-mdc-radio-group {
+    .mat-internal-form-field > label {
+        padding: 0;
+    }
+
+    .mat-mdc-radio-button .mdc-radio {
+        background: transparent;
+        &:hover{
+            border-radius: 10px;
+        }
+    }
+
+    --mat-sys-primary: red;
+    --mat-sys-on-surface: green;
+    --mat-sys-hover-state-layer-opacity: 0;
+}

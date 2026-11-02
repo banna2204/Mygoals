@@ -1,0 +1,42 @@
+<h1>{{title()}}</h1>
+<div class="openDialog" (click)="openDialog()">open dialog</div>
+<app-graph></app-graph>
+
+<!-- <div #greeting>Hello!</div>
+@defer (on hover(greeting)) {
+  <app-defer-component />
+} -->
+
+<!-- Trigger on hover -->
+<!-- @defer (on hover) {
+  <app-defer-component />
+} @placeholder {
+  <div>Large component placeholder</div>
+} -->
+
+@defer (on timer(1500ms)) {
+  <app-defer-component />
+} @loading (after 100ms; minimum 1s) {
+  <div>Large component placeholder</div>
+} @placeholder {
+  <p>Placeholder content</p>
+}
+
+<!-- trigger after 500ms -->
+<!-- @defer (on timer(1500ms)) {
+  <app-defer-component />
+} @placeholder {
+  <div>Large component placeholder</div>
+} -->
+
+<!-- class and style without ngClass and ngStyle -->
+<div class="testing" [class.admin]="isAdmin()" [class.dense]="density() === 'high'">
+    classes and styles
+</div>
+
+
+<app-button color="red" bgColor="#606E85" (clicked)="userClicked($event)"></app-button>
+
+<div class="animated-scroll-up">
+  <app-animated-scroll-up></app-animated-scroll-up>
+</div>
